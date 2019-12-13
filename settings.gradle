@@ -1,0 +1,2 @@
+include ':app', ':rxnetimp', ':baseGufra'
+rootProject.name='GufraNet'
