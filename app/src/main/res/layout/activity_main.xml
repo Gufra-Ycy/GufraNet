@@ -23,4 +23,15 @@
         android:layout_height="wrap_content"
         android:text="TabLayout"
         android:onClick="OnTab"/>
+
+    <com.gufra.ui.view.VerifyCodeView
+        android:id="@+id/view_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+    <com.gufra.ui.view.FloatActionView
+        android:id="@+id/view_float"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#0f0"/>
 </LinearLayout>
