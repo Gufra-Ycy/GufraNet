@@ -13,6 +13,7 @@ import android.telephony.PhoneNumberFormattingTextWatcher;
 import android.view.View;
 
 import com.google.android.material.tabs.TabLayout;
+import com.gufra.net.base.utils.AppUtils;
 import com.gufra.net.rxnetimp.R;
 import com.gufra.ui.fragment.JokeFragment;
 import com.gufra.ui.fragment.OneFragment;
@@ -37,7 +38,7 @@ public class TabActivity extends AppCompatActivity {
 
     private void initView() {
         mTab = (TabLayout)findViewById(R.id.tab_01);
-        mViewPager = (ViewPager)findViewById(R.id.viewpager_01);
+        mViewPager = (ViewPager)findViewById(AppUtils.getInstance(TabActivity.this).getResId("viewpager_01","id"));
         //预加载
         mViewPager.setOffscreenPageLimit(mFragments.size());
         //设置适配

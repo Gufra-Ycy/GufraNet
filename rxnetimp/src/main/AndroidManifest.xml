@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.gufra.net.rxnetimp">
-
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application>
+        <activity android:name="com.gufra.ui.activiity.GufraPayActivity"></activity>
+
         <service
             android:name="com.gufra.service.GufraService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
 
         <activity android:name="com.gufra.ui.activiity.TabActivity" />
     </application>

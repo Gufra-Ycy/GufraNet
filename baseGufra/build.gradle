@@ -31,4 +31,10 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    /**懂球帝sdk资源
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    implementation 'com.alibaba:fastjson:1.2.47'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'*/
 }
