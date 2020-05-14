@@ -1,42 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/DrawerArrowStyle"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/txt_result"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="请求结果"
-        />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Q存储"
-        android:onClick="OnQ"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TabLayout"
-        android:onClick="OnTab"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gufra_light_gray"
+            app:title="@string/app_name" />
+        <TextView
+            android:id="@+id/txt_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="请求结果"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Q存储"
+            android:onClick="OnQ"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TabLayout"
+            android:onClick="OnTab"/>
 
-    <Button
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付"
+            android:onClick="onPay"/>
+        <com.gufra.ui.view.VerifyCodeView
+            android:id="@+id/view_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+        <com.gufra.ui.view.FloatActionView
+            android:id="@+id/view_float"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/gufra_round"/>
+    </LinearLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="支付"
-        android:onClick="onPay"/>
-    <com.gufra.ui.view.VerifyCodeView
-        android:id="@+id/view_code"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"/>
-    <com.gufra.ui.view.FloatActionView
-        android:id="@+id/view_float"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/gufra_round"/>
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:itemTextColor="@color/gufra_blue_green"
+        app:itemIconTint="@color/gufra_light_gray"
+        app:menu="@menu/navigation_menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>
